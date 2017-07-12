@@ -38,7 +38,7 @@
  关注人|following|arr|否|默认［］　存用户_id
  提出问题|question|array|否|默认 [] 存问题_id
  回答问题|response|array|否|默认 [] 回答问题_id
- 关注的标签名||array|否|默认为空[]
+ 关注的标签名|focus|array|否|默认为空[]
  
  
  ### 问题信息
