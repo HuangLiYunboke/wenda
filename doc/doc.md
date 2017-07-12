@@ -27,7 +27,7 @@
 ## 数据库
 
 ### 页面的相关数据库设计
-
+#### 用户信息
 集合名 | 字段名 |类型|是否必填|备注
 ----|----|-----|--|-----|
 登录　|　_id　|obj|是|ID自动生成
@@ -35,7 +35,48 @@
 密码|password |string|是|　 
  关注数|follow|numble|否|默认是０
  点赞数|like|numble|否|默认０
- 关注人|following|arr|否|默认［］　存_id
+ 关注人|following|arr|否|默认［］　存用户_id
+ 提出问题|question|array|否|默认 [] 存问题_id
+ 回答问题|response|array|否|默认 [] 回答问题_id
+ 关注的标签名||array|否|默认为空[]
+ 
+ 
+ ### 问题信息
+ 集合名 | 字段名 |类型|是否必填|备注
+----|----|-----|--|-----|
+问题id|　_id　|obj|是|ID自动生成
+提问人的姓名|username|string|是|唯一 手机号
+提问问题的标题||string|是|
+提问内容| questions|string|是|
+回答问题id|responseid|Array|否|默认[]
+关注数|follow|number|否|默认为0
+收藏数||number|否|默认为0
+标签名|tag|Array|是|
+时间|time|new date|是|创建问题时自动生成
+
+
+### 回答集合
+ 集合名 | 字段名 |类型|是否必填|备注
+----|----|-----|--|-----|
+问题id|　_id　|obj|是|ID自动生成
+回答人的姓名|username|string|是|唯一 手机号
+回答的内容| questions|string|是|
+提问问题id|responseid|string|是|问题的id
+关注数|follow|number|否|默认为0
+时间|time|new date|是|回答问题时自动生成
+是否采纳||number|否|默认为0
+
+### 用到的相关web技术
+* node.js
+* mongoose
+* bootstrap
+* Html/css
+* Javascript
+* jquery
+
+
+
+
      
      
      
