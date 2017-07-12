@@ -28,11 +28,14 @@
 
 ### 页面的相关数据库设计
 
-集合名 | 字段名 | 备注
-----|----|-----
-登录　|　adminid　|ID自动编号
-　　　|username |用户名
-     |password |密码
-     
+集合名 | 字段名 |类型|是否必填|备注
+----|----|-----|--|-----|
+登录　|　_id　|obj|是|ID自动生成
+用户名　|username |string|是|唯一　手机号
+密码|password |string|是|　 
+ 关注数|follow|numble|否|默认是０
+ 点赞数|like|numble|否|默认０
+ 关注人|following|arr|否|默认［］　存_id
+     
      
      
