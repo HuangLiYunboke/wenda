@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "demo",
+=======
+  "name": "wenda",
+>>>>>>> 377ab3f095f82d2ad1fb5e2df74b77b9205ee8cd
   "version": "0.0.0",
   "private": true,
   "scripts": {

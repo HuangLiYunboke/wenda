@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
 var db = require('../db');
 
 /* GET home page. */
@@ -13,4 +14,12 @@ router.get('/', function(req, res, next) {
 });
 
 
+=======
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'afasdfdsfdsfdsfdsfdsfdsfdsfd' });
+});
+
+>>>>>>> 377ab3f095f82d2ad1fb5e2df74b77b9205ee8cd
 module.exports = router;
