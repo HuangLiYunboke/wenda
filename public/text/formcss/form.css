@@ -1,0 +1,197 @@
+body{
+    background:#F3F3F3;
+}
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+/*表单大体*/
+.form-body{
+    width:90%;
+    height:70%;
+    margin: auto;
+    position: relative;
+}
+/*表单问题题目*/
+#form-title,#form-group{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#title{
+    width:90%;
+    height:30px;
+}
+#title:focus{
+    border:1px solid #0ee;
+    box-shadow: 0 0 3px 0px #0ee;
+    outline-style: none;
+}
+/*问题标签与标签详细设计*/
+#form-group ul li{
+    margin-left:10px;
+    float:left;
+}
+#form-group{
+    margin-bottom:50px;
+}
+#group{
+    width:30%;
+    height:30px;
+    border:none;
+}
+#group:focus{
+    outline-style:none;
+}
+/*标签设置*/
+#tags{
+    width:300px;
+    height:300px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 #ccc;
+    position: absolute;
+    display: none;
+    z-index: 5;
+    background:#fff;
+}
+#nav-tabs{
+    width:300px;
+    height:150px;
+}
+#tags #nav-tabs .active a{
+    border:none;
+    color:#fff;
+    background: #009A61;
+}
+#tags #nav-tabs li a{
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 2px 5px;
+    color:#000;
+}
+#tags-text{
+    width:300px;
+    height:150px;
+    position: absolute;
+    top:20%;
+}
+.tab-pane{
+    position:absolute;
+    left:5px;
+    top:50px;
+    display:none;
+}
+.tab-pane ul li{
+    margin-left:5px;
+}
+.tag{
+    display:inline-block;
+    padding:0 8px;
+    color:#017E66;
+    background:rgba(1,126,102,0.08);
+    height:24px;
+    line-height: 24px;
+    font-weight:normal;
+    font-size: 13px;
+    text-align: center;
+    margin-top:5px;
+}
+/*编辑器位置调整*/
+.htmleaf-container{
+    margin-top:50px;
+}
+/*标签添加样式*/
+#input span{
+    display: inline-block;
+    color:#017e66;
+    background: #e7f2ed;
+    font-size:13px;
+    text-align: center;
+    margin-right:.5rem;
+    padding: 5px 8px;
+    line-height: 1;
+    margin-bottom: 5px;
+    margin-top:3px;
+    cursor: pointer;
+}
+/*标签设置框样式*/
+#form-group #input{
+    width:90%;
+    height:30px;
+    border:1px solid #ccc;
+    background: #fff;
+}
+/*悬赏设置*/
+#submit{
+    width:100%;
+    height:50px;
+    position:relative;
+}
+#sub{
+	display: inline-block;
+	width:100px;
+	height:35px;
+  line-height: 35px;
+	text-align: center;
+	color: #fff;
+	font-size:14px;
+	font-weight: 900;
+	background-color: #009a61;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor:pointer;
+	border:1px solid transparent;
+	border-radius:5px;
+  position: absolute;
+  right:10px;
+  bottom:5px;
+}
+#sub:focus{
+	outline-style: none;
+	border-radius:5px;
+	background: #006741;
+}
+.reward{
+    width:30%;
+    height:30px;
+    position: absolute;
+    left:10px;
+    top:10px;
+}
+#reward{
+    width:100%;
+    height:30px;
+    border:1px solid #E0E0E0;
+}
+#reward:focus{
+    outline-style:none;
+    border: 1px solid #0ee;
+}
+/*input提示字体样式*/
+input::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #757575;
+	font-size: 14px;
+}
+input:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #757575;
+	font-size: 14px;
+}
+input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #757575;
+	font-size: 14px;
+}
+input:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #757575;
+	font-size: 14px;
+}
