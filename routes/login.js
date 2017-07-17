@@ -17,6 +17,7 @@ router.post('/', (req, res) => {
     } else if (doc) {
       bcrypt.compare(upwd, doc.password, (err, hash) => {
         if(hash) {
+          req.session.gerenId = doc.geren;
           req.session.name = doc.nname;
           console.log(req.session.name);
           console.log('登陆成功');

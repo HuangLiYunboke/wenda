@@ -10,7 +10,8 @@ var userSchema = new mongoose.Schema({
   following:[Object],
   question:[Object],
   response:[Object],
-  focus:[String]
+  focus:[String],
+  geren:String
 });
 
 var userModel = mongoose.model('users', userSchema);
