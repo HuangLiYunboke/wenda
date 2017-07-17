@@ -16,12 +16,16 @@ router.post('/', (req, res) => {
   var upwd = req.body.password;
 
   userModel.findOne({name: uname}, (err, doc) => {
+      var gerenId;
     if (err) {
       console.log(err);
     } else if (doc) {
       console.log('账号已存在');
       res.redirect("/register");
     } else {
+
+     
+
 
       bcrypt.hash(upwd, salt, (err, hash) => {
         var gerenId;
@@ -36,6 +40,10 @@ router.post('/', (req, res) => {
           ResumeDescription: '',
           GoodSkills: ''
         });
+
+
+            
+
         geren.save((err, data) => {
           gerenId = data._id;
           console.log('register---gerenId',gerenId);
@@ -49,9 +57,8 @@ router.post('/', (req, res) => {
               res.redirect('/login');
           });
           // console.log('time',gerenId.getTimestamp());
+
         });
-
-
         console.log('注册成功');
       });
     }

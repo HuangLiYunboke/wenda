@@ -11,8 +11,12 @@ var users = require('./routes/users');
 var login = require('./routes/login');
 var register = require('./routes/register');
 var find = require('./routes/find');
+
+var geren = require('./routes/geren');
+
 var question = require('./routes/question');
 var answer = require('./routes/answer');
+
 
 
 
@@ -22,7 +26,7 @@ app.use(session({
   saveUninitialized: false,
   secret: '3nqr9xzx2438fgsdam4324n',
 	cookie:{
-		maxAge: 1000*60*1
+		maxAge: 1000*60*30
 	}
 }));
 // view engine setup
@@ -42,8 +46,16 @@ app.use('/users', users);
 app.use('/register', register);
 app.use('/login', login);
 app.use('/find', find);
+
+app.use('/geren',geren);
+app.use('/geren_wone',geren);
+app.use('/geren_wtwo',geren);
+app.use('/geren_wtre',geren);
+app.use('/geren_wfor',geren);
+
 app.use('/question', question);
 app.use('/answer', answer);
+
 
 
 // catch 404 and forward to error handler
