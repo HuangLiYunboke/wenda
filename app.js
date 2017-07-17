@@ -12,7 +12,7 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 var find = require('./routes/find');
 var question = require('./routes/question');
-
+var answer = require('./routes/answer');
 
 
 
@@ -43,6 +43,7 @@ app.use('/register', register);
 app.use('/login', login);
 app.use('/find', find);
 app.use('/question', question);
+app.use('/answer', answer);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="stylesheets/answer.css">
+    <title>detail</title>
+  </head>
+  <body>
+    <div class="content">
+
+      <div class="left">
+      </div>
+
+      <div class="middle">
+        <div class="head">
+          <div class="title">
+            <div class="title-text"><%= title%></div>
+            <div class="question-detail">
+              <ul>
+                <li style="font-weight:bold"><%= user%></li>
+                <li><%= date%></li>
+              </ul>
+            </div>
+          </div>
+          <div class="attention">
+            <div class="attention-info">
+              <div class="attention-sign">
+                关 注
+              </div>
+              <div class="attention-count">
+                关注人数
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="body-content">
+          <div class="user-head clearfix">
+            <div class="head-picture">
+
+            </div>
+            <div class="user-name"><%= user%></div>
+          </div>
+
+          <div class="question-text clearfix"><%= content%></div>
+          <div style="clear:both">
+
+          </div>
+        </div>
+        <div class="body-content">
+          <div class="user-head clearfix">
+            <div class="head-picture">
+
+            </div>
+            <div class="user-name">
+              评论用户名
+            </div>
+          </div>
+
+          <div class="question-text clearfix">
+              评论：你为什么这么傻逼aaaaaaaa傻逼啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊你是傻逼啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+          </div>
+          <div class="reply">
+            <div class="reply-head">
+              <div class="reply-head-picture">
+
+              </div>
+              <div class="reply-user-name">
+                回复用户名
+              </div>
+            </div>
+            <div class="reply-text">
+              评论的子回复：你怎么还是这么傻逼啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+            </div>
+
+          </div>
+          <div style="clear:both">
+
+          </div>
+        </div>
+        <div class="body-content">
+          <h3>撰写答案</h3>
+          <form class="answer" method="post">
+            <textarea name="answer"></textarea>
+            <button type="submit" name="button">提交答案</button>
+          </form>
+
+          <div style="clear:both">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+      </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src='javascripts/answer.js'></script>
+    <script type="text/javascript">
+      var tag = "<%= tag%>";
+
+      var array = tag.split(',');
+
+      for (var i = 0; i < array.length; i++) {
+        $('.question-detail ul').prepend('<li class="tag-css">' + array[i] + '</li>');
+      }
+    </script>
+  </body>
+</html>
