@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var gerenModel = require('../database/gerenModel');
 var salt = 10;
+var moment = require('moment');
 // var bcrypt = require('bcrypt');
 
 router.get('/',function (req,res,next) {
@@ -12,16 +13,21 @@ router.get('/',function (req,res,next) {
 		_id:req.session.gerenId
 		},function(err,data){
 			if(err)console.log('用户更新数据失败');
+			console.log(data);
+			console.log(data[0].Name);
+			console.log(data[0].Phone);
+			var dat=moment(data[0].BirthDay).format('YYYY-MM-DD');
+			console.log("dat:"+dat);
 			res.render('geren',{
-				name:data.Name,
-				age:data.Age,
-				phone:data.Phone,
-				birthDay:data.BirthDay,
-				residence:data.Residence,
-				email:data.Email,
-				personalWebsite:data.PersonalWebsite,
-				resumeDescription:data.ResumeDescription,
-				roodSkills:data.GoodSkills
+				name:data[0].Name,
+				gender:data[0].Gender,
+				phone:data[0].Phone,
+				birthDay:dat,
+				residence:data[0].Residence,
+				email:data[0].Email,
+				personalWebsite:data[0].PersonalWebsite,
+				resumeDescription:data[0].ResumeDescription,
+				roodSkills:data[0].GoodSkills
 			});
 		})
 	
@@ -65,7 +71,7 @@ router.post('/geren_wone',function(req,res,next){
 		},function(err){
 			if(err)res.send('gr更新失败');
 			res.redirect('/geren');
-		
+			
  		
 
  		 
@@ -81,9 +87,9 @@ router.post('/geren_wtwo',function(req,res,next){
 
 	console.log(data);
 
-	db.Comp.update(
+	gerenModel.update(
 		{
-			_id:req.session.Id
+			_id:req.session.gerenId
 		},{
 			$set:{
 		
@@ -116,9 +122,9 @@ router.post('/geren_wtwo',function(req,res,next){
 
 // 个人信息之开源项目
 router.post('/geren_wtre',function(req,res,next){
-		db.Project.update(
+		gerenModel.update(
 		{
-			_id:req.session.Id
+				_id:req.session.gerenId
 		},{
 			$set:{
 				//项目名
@@ -154,7 +160,7 @@ router.post('/geren_wfor',function(req,res,next){
 
 	db.EducationalExperience.update(
 		{
-			_id:req.session.Id
+			_id:req.session.gerenId
 			// _id:ObjectId('596c255dfe08be0f0d6d5f77')
 		},{
 			$set:{

@@ -21,7 +21,7 @@ app.use(session({
   saveUninitialized: false,
   secret: '3nqr9xzx2438fgsdam4324n',
 	cookie:{
-		maxAge: 1000*60*1
+		maxAge: 1000*60*30
 	}
 }));
 // view engine setup

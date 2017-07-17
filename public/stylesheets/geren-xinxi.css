@@ -34,9 +34,15 @@ body{
 }
 
 /*我的主页  内容区*/
-#index{
+
+#index1{
 	/*border-left:  1px solid #ccc;*/
+	display: block;
 }
+#index2,#index3,#index4,#index5,#userform{
+	display: none;
+}
+
 .ind-head li a{
 	padding: 24px
 }
@@ -48,6 +54,8 @@ body{
 	overflow:auto;
 	position: relative;
 }
+
+
 
 #wdow .wdow-di{
 	margin: 10px auto;
@@ -100,7 +108,9 @@ body{
 #wdow .wdow-di .wdow-n .wdow-n-strry{
 	padding:5px 10px ;height:100px 
 }
-
+#wd-div1,#wd-div2,#wd-div3{
+	display: none;
+}
  a.a-sty{
 	width:16px;
 	height:16px;

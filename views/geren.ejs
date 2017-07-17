@@ -125,11 +125,11 @@
 	<div class="container " >
 
 		<!-- 个人内容部分 -->
-		<div class="col-md-9 pos ">
+		<div class="col-md-9 pos" id="ne-indx">
 			<!-- 表1 -->
 			
 			<!-- 我的主页 -->
-			<div id="index">
+			<div id="index1">
 					<nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
 						<div class="container-fluid"> 
 
@@ -144,10 +144,11 @@
 								<a class="navbar-brand" href="#">教程名称</a>
 							</div> -->
 							
-							<div class="collapse navbar-collapse bs-js-navbar-scrollspy">
-								<ul class="nav navbar-nav ind-head" >
-									<li><a href="#gr">个人档案</a></li>
-									<li><a href="#gz">工作经历</a></li>
+							<div 
+							class="collapse navbar-collapse bs-js-navbar-scrollspy">
+								<ul class="nav navbar-nav ind-head" id="indx-oneul" >
+									<li><a href="#wd-div1">个人档案</a></li>
+									<li><a href="#wd-div2">工作经历</a></li>
 									<!-- <li class="dropdown">
 										<a href="#" id="navbarDrop1" class="dropdown-toggle" 
 										   data-toggle="dropdown">Java
@@ -161,9 +162,9 @@
 											<li><a href="#spring" tabindex="-1">spring</a></li>
 										</ul>
 									</li> -->
-									<li><a href="#jl">教育经历</a></li>
+									<li><a href="#wd-div3">教育经历</a></li>
 
-									<li><a href="#ky">开源项目&文章著作</a></li>
+									<li><a href="#wd-div4">开源项目&文章著作</a></li>
 								</ul>
 							</div>
 						</div> 
@@ -172,45 +173,63 @@
 						id="wdow">
 						 	<!-- 主页窗口1 -->
 						 	
-						 	<div style="" class="pos wdow-di">
+						 	<div style="" class="pos wdow-di" id="wd-div0" >
 						 		<div class="wdow-t"  id="gr"> 个人档</div>
-						 		<div class="wdow-n">
+						 		<div class="wdow-n pos">
+						 			<div id="grd">
+							 			<a class="a-sty" href="#userform" id="a-bj" title="编辑" >
+									  	</a>
+									 	<div class="wdow-n-one" class="pos">
+									 		  <div class=" d-sp" >
+											  	<div class="fon-cor" ><span>真实姓名</span></div>
+											  	<div><span><%= name %></span></div>
+										 	  </div>
+											  <div class="d-sp" >
+											  	<div class="fon-cor"><span>性别</span></div>
+											  	<div>
+											  		<% if(gender == '0'){ %>
+											  	
+											  		
+											  			<span >保密</span>
 
-								 	<div class="wdow-n-one" class="pos">
-								 		  <div class=" d-sp" >
-										  	<div class="fon-cor" ><span>真实姓名</span></div>
-										  	<div><span>才怪</span></div>
-									 	  </div>
-										  <div class="d-sp" >
-										  	<div class="fon-cor"><span>性别</span></div>
-										  	<div><span>男</span></div>
-										  </div>
-										  <div class="d-sp">
-										  	<div class="fon-cor"><span>出生日期</span></div>
-										  	<div><span>date</span></div>
-										  </div>
-										  <div class="d-sp">
-										  	<div class="fon-cor"><span>手机号码</span></div>
-										  	<div><span>666666</span></div>
-										  </div>
-										  <div class="d-sp">
-										  	<div class="fon-cor"><span>Email</span></div>
-										  	<div><span>110@qq.com</span></div>
-										  </div>
-										  <div class="d-sp">
-										  	<div class="fon-cor"><span>现居住地</span></div>
-										  	<div><span>天堂</span></div>
-										  </div>
-									</div>
-								  	<div class="pos wdow-n-two">
-								  		<div>个人履历</div>
-								  	</div>
-							  		<div  class="pos wdow-n-two ">
-							  			<div>擅长技术</div>
+											  		<% }else if(gender =='1'){ %>
+											  			<span >男</span>
+											  			<% }else{ %>
+											  			<span >女</span>
+											  			
+											  	
+											  		<% }  %>
+											  	</div>
+											  </div>
+											  <div class="d-sp">
+											  	<div class="fon-cor"><span>出生日期</span></div>
+											  	<div><span><%= birthDay %></span></div>
+											  </div>
+											  <div class="d-sp">
+											  	<div class="fon-cor"><span>手机号码</span></div>
+											  	<div><span><%= phone %></span></div>
+											  </div>
+											  <div class="d-sp">
+											  	<div class="fon-cor"><span>Email</span></div>
+											  	<div><span><%= email %></span></div>
+											  </div>
+											  <div class="d-sp">
+											  	<div class="fon-cor"><span>现居住地</span></div>
+											  	<div><span><%= residence %></span></div>
+											  </div>
+										</div>
+									  	<div class="pos wdow-n-two">
+									  		<div>个人履历</div>
+									  		<div><%= resumeDescription %></div>
+									  	</div>
+								  		<div  class="pos wdow-n-two ">
+								  			<div>擅长技术</div>
+								  			<div><%= roodSkills %></div>
+								  		</div>
 							  		</div>
 							  		<div   >
 							  			<!-- from ************************************1 -->
-										<form class="formcss" action="/geren/geren_wone" method="post" >
+										<form class="formcss" action="/geren/geren_wone" method="post" id="userform" >
 											<div class="row">
 												<div class="col-md-6" > 
 													<div class="form-group">
@@ -222,15 +241,29 @@
 												<div class="col-md-6">
 													 <div class="form-group">
 													    <label for="exampleInputPassword1">性别</label>
+													   
+
 													    <div class="">
 													    	<label class="checkbox-inline" >
-													    	<input type="radio" name="age" value="0"  >保密
+													    	<input type="radio" name="gender" value="0"  
+													    	<% if(gender == '0'){ %>
+													    		checked="checked" 
+													    	<% } %>
+													    	>保密
 														    </label>
 														    <label class="checkbox-inline" > 
-														    	<input type="radio" name="age" value="1"  >男
+														    	<input type="radio" name="gender" value="1" 
+														    	<% if(gender == '1'){ %>
+													    			checked="checked" 
+													    		<% } %>
+														    	 >男
 														    </label>
 														    <label class="checkbox-inline" >
-														    	 <input type="radio" name="age" value="2" >女
+														    	 <input type="radio" name="gender" value="2" 
+														    	<% if(gender == '2'){ %>
+													    			checked="checked" 
+													    		<% } %>
+														    	 >女
 														    </label>
 													    </div>
 													    
@@ -244,7 +277,7 @@
 												<div class="col-md-6">
 													  <div class="form-group">
 													    <label for="exampleInputFile">出生日期</label>
-													    <input type="date" class="form-control" name="birthday" value="<%= birthDay %>">
+													    <input type="date" class="form-control datepicker" data-data-format="yyy-mm-dd" name="birthday"  value="<%= birthDay %>" id="gr-date" >
 													   
 													  </div>
 												</div>
@@ -275,17 +308,17 @@
 											 </div>
 											
 											<!-- 履历说明 -->
-											 <div >
+											 <div class="form-group">
 											 	<label class="">履历说明</label>
-											 	<textarea class="form-control" placeholder="请开始你的表演" name="resumeDescription" rows="6" value="<%= resumeDescription %>"></textarea>
+											 	<textarea class="form-control" form="userform" placeholder="请开始你的表演" name="resumeDescription" rows="6"  ><%= resumeDescription %></textarea>
 											 </div>
 											 <!-- 技术擅长  -->
-											 <div>
+											 <div class="form-group">
 												<label class="">擅长技术</label>
-												<input type="text" name="goodSkills" placeholder="0_0 |||" value="<%=roodSkills %>" >
+												<input type="text" name="goodSkills" class="form-control" placeholder="0_0 |||" value="<%= roodSkills %>" >
 											 </div>
 											 <div class="text-right">
-											 	<button type="button" class=" btn btn-default   btn-sm js-cancel ">取消</button>
+											 	<button type="button" class=" btn btn-default   btn-sm js-cancel " id="bnt1">取消</button>
 											  	 <button type="submit" class=" btn btn-primary  btn-sm js-cancel ">提交</button>
 											 </div>
 										</form>
@@ -294,7 +327,7 @@
 								
 						 	</div>
 						 	
-						 	<div class="wdow-di" id="gz">
+						 	<div class="wdow-di" id="wd-div1">
 						 		<div  class="wdow-t">工作经历</div>
 						 		<div class="wdow-n">
 
@@ -304,69 +337,85 @@
 							  		</div>
 							  		<div   >
 							  			<!-- form *****************************2 -->
-										<form class="formcss" action="/geren/geren_wtwo" method="post" >
+										<form class="formcss" action="/geren/geren_wtwo" >
 											
-											<div class="row">
-												<div class="col-md-6" > 
-													<div class="form-group">
-													    <label for="exampleInputEmail1">公司</label>
-													    <input type="text" class="form-control" placeholder="哪家滴呀" name="company">
-											
-												  	</div>
+											<div class="row ">
+												
+												<div class="form-group col-md-6">
+												    <label for="exampleInputEmail1">公司</label>
+												    <input type="text" class="form-control" placeholder="哪家滴呀" name="company">
+										
 											  	</div>
-												<div class="col-md-6">
-													  <div class="form-group">
+											  	
+												<div class="col-md-6 form-group">
+													  
 													    <label for="exampleInputFile">职位头衔</label>
-													    <input type="text" name="jobTitle" class="form-control" placeholder="程序员">
+													    <input type="text" name="jobTitle" class="form-control" placeholder="如：程序猿">
 													   
-													  </div>
 												</div>
+												
 											</div>
-											<div class="row">
-												<div class="col-md-3">
-													  <div class="form-group">
-													    <label for="exampleInputFile">在职时间</label>
-													    <label class="required control-label"><input type="text" class="form-control " placeholder="入职时间：1970-01" name="inductionTime" ></label>
-													   
-													    
-													   	 
-													  </div>
-												</div>
-												<div class="col-md-3">
-													  <div class="form-group">
-													   
-													    <label >
-													    <input type="checkbox" name="onJob" >目前仍然在职
-													    </label>
-													    <label class="required control-label">
-													    <input type="text" class="form-control " placeholder="离职时间" name="departureTime"></label>
-													    
-													   	 
-													  </div>
-												</div>
+											<div class="row ">
+												
+													<div class="col-md-3">
+														  <div class="form-group">
+														    <label for="exampleInputFile">在职时间</label>
+														    <label class="required control-label">
+														   		 <input type="date" class="form-control"  placeholder="入职时间" name="inductionTime" >
+														    </label>
+														   
+														    
+														   	 
+														  </div>
+													</div>
+													<div class="col-md-3">
+														  <div class="form-group">
+														   
+														    <label >
+														    <input type="checkbox" checked="checked" name="onJob" >目前仍然在职
+														    </label>
+														    <label class="required control-label">
+														   		
+														   		 <input type="tetx" class="form-control " disabled placeholder="至今"  name="">
+														    </label>
+														    
+														   	 
+														  </div>
+													</div>
+													<div class="col-md-3 hide">
+														  <div class="form-group">
+														   
+														    <label >
+														    <input type="checkbox"  name="onJob" >目前仍然在职
+														    </label>
+														    <label class="required control-label">
+														   		 <input type="date" class="form-control "  placeholder="离职时间" name="departureTime">
+														    </label>
+														   
+														   	 
+														  </div>
+													</div>
+												
 											</div>
 
-											<div >
-												 <div class="form-group">
+											<div class="form-group">
+												
 													   
 												    <label class="">相关技术</label>
 												    
 												   		<input class="form-control " type="text" name="relatedTechnology" placeholder="0_0 |||">
 												
-													    
-											   	 
-											  </div>
 											</div>
 												
-											 <div  >
+											 <div   class="form-group" >
 											 	<label class="">职位描述</label>
 											 	<textarea class="form-control" placeholder="请开始你的表演" rows="6" name="jobDescription"></textarea>
 											 </div>
 											
-											
-											<button type="button" class=" btn btn-default js-cancel ">取消</button>
-											   <button type="submit" class=" btn btn-default js-cancel ">提交</button>
-											
+											<div class="text-right ">
+											 	<button type="button" class=" btn btn-default   btn-sm js-cancel ">取消</button>
+											  	 <button type="submit" class=" btn btn-primary  btn-sm js-cancel ">提交</button>
+											 </div>
 											
 											
 										</form>
@@ -375,7 +424,7 @@
 								
 						 	</div>
 						 	
-						 	<div class="wdow-di" id="ky">
+						 	<div class="wdow-di" id="wd-div3">
 						 		<div class="wdow-t">开源项目 & 文章著作	</div>
 						 		<div class="wdow-n">
 
@@ -385,7 +434,7 @@
 								  	</div>
 							  		<div >
 							  			<!-- form *******************************3 -->
-										<form class="formcss" action="/geren/geren_wtre" method="post" >
+														<form class="formcss" action="/gerengeren_wtre" method="post">
 											
 											<div class="row">
 												<div class="col-md-6" > 
@@ -414,38 +463,48 @@
 													  </div>
 												</div>
 												<div class="col-md-3">
-													  <div class="form-group">
-													   	
-													    <label >
-													    <input type="checkbox" name="maintainTime" >目前在维护
-													    </label>
-													    <label class="required control-label">
-													    <input type="text" name="isOver" class="form-control " placeholder="离职时间"></label>
-													    
-													   	 
-													  </div>
+														  <div class="form-group">
+														   
+														    <label >
+														    <input type="checkbox" checked="checked" name="onJob" >仍然维护
+														    </label>
+														    <label class="required control-label">
+														   		
+														   		 <input type="tetx" class="form-control " disabled placeholder="至今"  name="">
+														    </label>
+														    
+														   	 
+														  </div>
 												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-													   
-													    <label >
-													    项目角色
+												<div class="col-md-3 hide">
+														  <div class="form-group">
+														   
+														    <label >
+														    	<input type="checkbox"  name="onJob" >仍然维护
+														    </label>
+														    <label class="required control-label">
+														   		 <input type="date" class="form-control "  placeholder="结束时间" name="departureTime">
+														    </label>
+														   
+														   	 
+														  </div>
+												</div>
+												<div class="col-md-6 form-group" >
+													
+													  
+													    <label class="required  control-label">
+														    项目角色
 													    </label>
-													    <label class="required control-label">
-													    <select name="projectRoles">
-													    	<option >主力开发者</option>
-													    	<option>助理开发者</option>
-													    	<option>项目经理</option>
-													    </select>
-													    </label>
-													    
-													   	 
-													  </div>
+													    <select name="projectRoles" class="form-control">
+														    	<option >主力开发者</option>
+														    	<option>助理开发者</option>
+														    	<option>项目经理</option>
+														</select>
 												</div>
 											</div>
 
-											<div >
-												 <div class="form-group">
+										
+											<div class="form-group">
 													   
 												    <label class="">相关技术</label>
 												    
@@ -453,17 +512,19 @@
 												
 													    
 											   	 
-											  </div>
-											</div>
+											 </div>
+									
 												
-											 <div  >
+											 <div class="form-group"  >
 											 	<label class="">职位描述</label>
 											 	<textarea class="form-control" placeholder="请开始你的表演" name="projectDescription" rows="6"></textarea>
 											 </div>
 											
 											
-											<button type="button" class=" btn btn-default js-cancel ">取消</button>
-											   <button type="button" class=" btn btn-default js-cancel ">提交</button>
+											<div class="text-right ">
+											 	<button type="button" class=" btn btn-default   btn-sm js-cancel ">取消</button>
+											  	 <button type="submit" class=" btn btn-primary  btn-sm js-cancel ">提交</button>
+											 </div>
 											
 											
 											
@@ -473,7 +534,7 @@
 								</div>
 								
 						 	</div>
-						 	<div class="wdow-di" id="jl">
+						 	<div class="wdow-di" id="wd-div2">
 						 		<div class="wdow-t" >教育经历</div>
 						 		<div class="wdow-n">
 
@@ -484,8 +545,8 @@
 
 							  		<div   >
 							  			<!-- form********************************4 -->
-										<form class="formcss" action="/geren/geren_wfor" method="post">
-											
+										<form class="formcss" action="/geren_wfor" >
+												
 											<div class="row">
 												<div class="col-md-6" > 
 													<div class="form-group">
@@ -497,7 +558,7 @@
 												<div class="col-md-6">
 													  <div class="form-group">
 													    <label for="exampleInputFile">所学专业</label>
-													    <input type="text" class="form-control" name="major" placeholder="电子信息科学与技术">
+													    <input type="text" class="form-control" name="major" placeholder="如：电子信息科学与技术">
 													   
 													  </div>
 												</div>
@@ -513,38 +574,50 @@
 													  </div>
 												</div>
 												<div class="col-md-3">
-													  <div class="form-group">
+														  <div class="form-group">
+														   
+														    <label >
+														    <input type="checkbox" checked="checked" name="onJob" >目前就读
+														    </label>
+														    <label class="required control-label">
+														   		
+														   		 <input type="tetx" class="form-control " disabled placeholder="至今"  name="">
+														    </label>
+														    
+														   	 
+														  </div>
+													</div>
+													<div class="col-md-3 hide">
+														  <div class="form-group">
+														   
+														    <label >
+														    <input type="checkbox"  name="onJob" >目前就读
+														    </label>
+														    <label class="required control-label">
+														   		 <input type="date" class="form-control "  placeholder="毕业时间" name="departureTime">
+														    </label>
+														   
+														   	 
+														  </div>
+													</div>
+												<div class="col-md-6 form-group">
+													  
 													   
-													    <label >
-													    <input type="checkbox" name="isAttendSchool"  >是否在就读
-													    </label>
 													    <label class="required control-label">
-													    <input type="text" class="form-control " name="graduationTime" placeholder="毕业时间"></label>
-													    
-													   	 
-													  </div>
-												</div>
-												<div class="col-md-3">
-													  <div class="form-group">
-													   
-													    <label >
-													    学历
+													    	学历
 													    </label>
-													    <label class="required control-label">
-													    	<select name="education" >
+													    <select name="education" class="form-control" >
 													    		<option value="学科">学科</option>
 													    		<option value="硕士">硕士</option>
 													    		<optgroup value="博士">博士</optgroup>
 													    	</select>
-													    </label>
-													    
 													   	 
-													  </div>
+													 
 												</div>
 											</div>
 
-											<div >
-												 <div class="form-group">
+											
+											 <div class="form-group">
 													   
 												    <label class="" >相关技术</label>
 												    
@@ -552,17 +625,18 @@
 												
 													    
 											   	 
-											  </div>
+											  
 											</div>
 												
-											 <div  >
+											 <div class="form-group" >
 											 	<label class="">取得成就</label>
 											 	<textarea class="form-control" placeholder="请开始你的表演" name="achieve" rows="6"></textarea>
 											 </div>
 											
-											
-											<button type="button" class=" btn btn-default js-cancel ">取消</button>
-											   <button type="submit" class=" btn btn-default js-cancel ">提交</button>
+											<div class="text-right ">
+											 	<button type="button" class=" btn btn-default   btn-sm js-cancel ">取消</button>
+											  	 <button type="submit" class=" btn btn-primary  btn-sm js-cancel ">提交</button>
+											 </div>
 											
 											
 											
@@ -675,7 +749,7 @@
 	                            </div>
 	                        </div>
 	                    </li>
-	                </ul>
+	            </ul>
 
 			</div>
 			<!-- 我的收藏 -->
@@ -802,9 +876,7 @@
 	                        <li><a href="#">»</a></li>
 	                    </ul>
                  	 </div>
-				</div>
-				
-	                
+				</div>         
 			</div>
 
 			<!-- 我的回答 -->
@@ -967,15 +1039,15 @@
 	                                     <div class="action">
 	                                       <button type="button" class="btn btn-primary btn-xs" title="修改">
 	                                        <span class="glyphicon glyphicon-pencil"></span>
-	                                    </button>
-	                                    <button type="button" class="btn btn-success btn-xs" title="已采纳">
-	                                        <span class="glyphicon glyphicon-ok"></span>
-	                                    </button>
-	                                    <button type="button" class="btn btn-danger btn-xs" title="删除记录">
-	                                        <span class="glyphicon glyphicon-trash"></span>
-	                                    </button>
+		                                    </button>
+		                                    <button type="button" class="btn btn-success btn-xs" title="已采纳">
+		                                        <span class="glyphicon glyphicon-ok"></span>
+		                                    </button>
+		                                    <button type="button" class="btn btn-danger btn-xs" title="删除记录">
+	                                 	       <span class="glyphicon glyphicon-trash"></span>
+	                                  	    </button>
 	                                    
-	                                </div>
+	                              		  </div>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -1071,9 +1143,7 @@
 	                    </ul>
                  	 </div>
 				</div>
-			</div>
-		
-			
+			</div>	
 		</div>
 		
 				
@@ -1112,7 +1182,7 @@
 			
 			<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="navfi">
 				<div  class="pos row" >
-					<ul class="list-group">
+					<ul class="list-group " id="ul-lef">
 
 	 				  <li class="list-group-item change oaerror rigli" id="rili1" > 
 	 				  	<a href="#index" class="list-group-item bord-none " style="">
@@ -1124,7 +1194,7 @@
 
 	 				  
 					  <li class="list-group-item change oaerror rigli" id="rili2" >
-						  <a href="#index2" class="list-group-item bord-none">
+						  <a class="list-group-item bord-none">
 							  <i class="glyphicon glyphicon-triangle-left pull-left " ></i>
 							  我的提问
 							   <i class="glyphicon glyphicon-cloud-upload pull-right"></i>
@@ -1161,8 +1231,34 @@
 	</div>
 	<script type="text/javascript" href="javascripts/daohang.js"></script>
 	<script type="text/javascript">
-		
+		// 主页1 
+		$('#a-bj').click(function(){
+			$('#userform').show();
+			$('#grd').hide();
+		})
+		$('#bnt1').click(function(){
+			$('#userform').hide();
+			$('#grd').show();
+		})
+		// 主页1 ul
+		 for(let i = 0;i <=3;i++){
+		 		$('#indx-oneul li').eq(i).click(i,function(e){
+		 			console.log(e.data)
+		 			$('#wd-div'+ e.data).show().siblings().hide();
 
+		 		})
+		 }
+
+		 //左侧 ul
+		 for (var i = 1 ; i <= 5; i++ ){
+	          $("#ul-lef li").eq(i-1).click(i,function (e) {
+	            console.log(e.data);
+	            console.log();
+	            $("#index" +e.data ).show().siblings().hide();
+	            // $(".d-im img").eq(e.data).prev().show();
+	          });
+			
+		}
 
 	</script>
 </body>
