@@ -16,28 +16,14 @@ router.post('/', (req, res) => {
   var upwd = req.body.password;
 
   userModel.findOne({name: uname}, (err, doc) => {
+      var gerenId;
     if (err) {
       console.log(err);
     } else if (doc) {
       console.log('账号已存在');
       res.redirect("/register");
     } else {
-      var gerenId;
-      var geren = new gerenModel({
-        Name: '',
-        Gender: '',
-        Phone: 0,
-        BirthDay: 2000/01/01,
-        Residence: '',
-        Email: '',
-        PersonalWebsite:'',
-        ResumeDescription: '',
-        GoodSkills: ''
-      });
-      geren.save((err, data) => {
-        gerenId = data._id;
-        // console.log('time',gerenId.getTimestamp());
-      });
+     
 
       bcrypt.hash(upwd, salt, (err, hash) => {
         var newuser = new userModel({
@@ -48,6 +34,22 @@ router.post('/', (req, res) => {
         });
         newuser.save((err, data) => {
             res.redirect('/login');
+
+            var geren = new gerenModel({
+              Name: '',
+              Gender: '',
+              Phone: 0,
+              BirthDay: 2000/01/01,
+              Residence: '',
+              Email: '',
+              PersonalWebsite:'',
+              ResumeDescription: '',
+              GoodSkills: ''
+            });
+            geren.save((err, data) => {
+              gerenId = data._id;
+              // console.log('time',gerenId.getTimestamp());
+            });
         });
         console.log('注册成功');
       });

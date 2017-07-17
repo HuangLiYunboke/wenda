@@ -1,0 +1,184 @@
+
+
+
+body{
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	background-color: #f6f6f6;
+	/*background: url('./public/images/bodybg.jpg');*/
+}
+.jianjie{
+	height: 290px;
+	width: 240px;
+	background-color: #485458;
+	padding: 10px;
+	/*float: right;*/
+}
+
+.body-head ul{
+	list-style: none;
+
+}
+.body-head ul li{
+	float: left;
+	/*border: 1px solid green;*/
+	padding: 10px 5px ;
+}
+.pos{
+    		position: relative;
+ }
+.padd{
+	height: 57px; 
+	width: auto;
+}
+
+/*我的主页  内容区*/
+#index{
+	/*border-left:  1px solid #ccc;*/
+}
+.ind-head li a{
+	padding: 24px
+}
+#navbar-example {
+	margin-bottom: 0;
+}
+#wdow{
+	/*height:800px;*/
+	overflow:auto;
+	position: relative;
+}
+
+#wdow .wdow-di{
+	margin: 10px auto;
+	width: 90%;
+}
+
+
+#wdow .wdow-di .wdow-t{
+	border-radius: 5px 5px 0 0;
+	background-color:#008F2F;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	padding-left: 20px;
+}
+#wdow .wdow-di .wdow-n{
+	border: 1px solid #008F2F;
+	padding: 15px	;
+	border-radius: 0 0 5px 5px;
+}
+
+.formcss{
+	padding: 10px ;
+	margin:10px 0;
+	background-color: #759A9C;
+	border-radius: 5px
+}
+
+#wdow .wdow-di .wdow-n .wdow-n-one{
+	border-bottom: 1px solid #ccc;
+	padding:5px 10px
+}
+#wdow .wdow-di .wdow-n .d-sp{
+	
+	display: inline-block;
+	width: 170px;
+	padding:5px 10px ;
+	margin: 10px 5px;
+}
+
+#wdow .wdow-di .wdow-n .fon-cor{
+	color: #777;
+}
+
+#wdow .wdow-di .wdow-n .wdow-n-two{
+	border-bottom: 1px solid #ccc;
+	padding:10px 10px ;
+	height:120px ;
+}
+#wdow .wdow-di .wdow-n .wdow-n-strry{
+	padding:5px 10px ;height:100px 
+}
+
+ a.a-sty{
+	width:16px;
+	height:16px;
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	/*z-index: 1;*/
+	background: url('../images/bianji02.png');
+}
+
+ a.a-sty:hover{
+	background: url('../images/bianji01.png');
+}
+
+
+/*头像  粉丝/关注 绑定*/
+
+
+.padding-none{
+	padding: 1px 10px;
+}
+
+.afollow{
+	background-color: #f6f6f6
+
+}
+.afollow img{
+	border-radius: 50%;
+}
+
+#afoll-inp{
+	position: absolute;
+	top: 0px;
+	left: 24px;
+	height: 180px;
+	width: 205px;
+	border-radius: 50% ;
+	opacity: 0; 
+}
+
+.afollow ul{
+	text-align: center;
+	margin: 1px auto;
+	
+}
+
+.afollow ul li{
+	display: inline-block;
+	float: none;
+	
+}
+
+
+
+
+/*表2*/
+.oaerror {
+  
+  margin: 0 auto; /* Centering Stuff */
+ 
+  border-bottom:   1px solid #CECECE;
+  border-radius: 3px;
+  
+ 
+  
+}
+.change{
+	padding: 10px 6px;
+
+}
+.bord-none{
+	border: none;
+	text-align: center;
+
+}
+
+.rigli{
+	border:none;
+	margin: 10px 0;
+	width: 265px
+}
