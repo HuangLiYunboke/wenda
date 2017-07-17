@@ -5,11 +5,7 @@
  */
 
 var app = require('../app');
-<<<<<<< HEAD
-var debug = require('debug')('demo:server');
-=======
 var debug = require('debug')('wenda:server');
->>>>>>> 377ab3f095f82d2ad1fb5e2df74b77b9205ee8cd
 var http = require('http');
 
 /**
