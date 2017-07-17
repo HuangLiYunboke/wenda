@@ -8,6 +8,7 @@ var queSchema = new mongoose.Schema({
   tag : Array,
   reward : Number,
   time : Date,
+  watch : Number,
   follow : {type:Number,default:0},
   slove : {type:Boolean,default:false}
 });

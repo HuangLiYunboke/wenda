@@ -304,14 +304,15 @@
 				var reward = $("#reward").val();
 				console.log(reward);
 				//时间
-				var watch = new Date().getTime();
-				console.log(watch);
+				var time = new Date();
+				var watch = time.getTime();
 				//信息聚合
 				var con = {
 					title : title,
 					content : content,
 					reward : reward,
-					time : watch,
+					time : time,
+					watch : watch,
 					tag : arr
 				};
 

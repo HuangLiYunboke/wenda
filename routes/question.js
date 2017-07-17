@@ -14,6 +14,7 @@ router.post('/',function(req,res){
   m.content = data.content;
   m.tag = data.tag;
   m.time = data.time;
+  m.watch = data.watch;
   m.reward = data.reward;
   m.save(function(err,doc){
     if (err){
@@ -23,9 +24,6 @@ router.post('/',function(req,res){
     }
   });
 
-});
-router.get('/a',function(req,res){
-  res.render('index');
 });
 
 module.exports = router;
