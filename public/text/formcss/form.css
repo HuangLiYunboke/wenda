@@ -139,6 +139,7 @@ a:hover{
 	display: inline-block;
 	width:100px;
 	height:35px;
+  line-height: 35px;
 	text-align: center;
 	color: #fff;
 	font-size:14px;
@@ -148,9 +149,9 @@ a:hover{
 	cursor:pointer;
 	border:1px solid transparent;
 	border-radius:5px;
-    position: absolute;
-    right:10px;
-    bottom:5px;
+  position: absolute;
+  right:10px;
+  bottom:5px;
 }
 #sub:focus{
 	outline-style: none;

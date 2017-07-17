@@ -16,4 +16,7 @@ router.get("/logout",function(req,res){
 	res.redirect("/");
 });
 
+router.get('/one',function(req,res){
+  res.render(error);
+});
 module.exports = router;

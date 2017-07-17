@@ -226,8 +226,8 @@
 			<div class="reward">
 				<input type="text" id="reward" name="reward" autocomplete="off" placeholder="你是否要悬赏呢？悬赏多少？">
 			</div>
-			<button type="submit" id="sub" >发布问题</button>
-
+			<!-- <button type="submit" id="sub" >发布问题</button> -->
+			<a href="/" id="sub">发布问题</a>
 		</div>
 
 </div>
@@ -316,13 +316,13 @@
 				};
 
 				$.ajax({
-					url : "/one",
+					url : "/question",
 					data : con,
 					type : "post",
 					traditional : true
 				}).then(function(data,textStatus,jqXHR){
 					console.log("success");
-					// window.location = "http://127.0.0.1:3000/question";
+					// window.location = "http://127.0.0.1:3000/";
 				},function(jqXHR,textStstus,errThrown){
 					console.log(textStstus);
 				});

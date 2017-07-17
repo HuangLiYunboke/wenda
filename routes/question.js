@@ -5,8 +5,7 @@ var ques = require('../database/queModel.js');
 router.get('/',function(req,res,next){
   res.render('question');
 });
-router.post('/question',function(req,res){
-  console.log("12321");
+router.post('/',function(req,res){
 
   var data = req.body;
   console.log(data);
@@ -21,7 +20,6 @@ router.post('/question',function(req,res){
       console.log(err);
     }else {
       console.log("ajsdgfjasg");
-      res.redirect('/question/a');
     }
   });
 
