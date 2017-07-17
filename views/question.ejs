@@ -293,7 +293,16 @@
 
 
 			//ajax获取数据传入后台
-			$("#sub").click(function(){
+			$("#sub").click(function(event){
+
+				var oo = $("#input span").text();
+
+				if ( oo === ""){
+					alert("请添加标签");
+					event.preventDefault();
+					return false;
+				}
+
 				//获取文输入信息
 				var content =  $("#editor-container").text();
 				console.log(content);

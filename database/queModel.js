@@ -13,5 +13,5 @@ var queSchema = new mongoose.Schema({
   slove : {type:Boolean,default:false}
 });
 
-var queModel = mongoose.model('ques', queSchema);
+var queModel = mongoose.model('questions', queSchema);
 module.exports = queModel;

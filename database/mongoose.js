@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://wenda:123@ds157712.mlab.com:57712/nodedb");
+mongoose.connect("mongodb://127.0.0.1:27017/stu");
 const db = mongoose.connection
 db.on('error', console.error.bind(console, '连接错误：'))
 db.once('open', (callback) => {

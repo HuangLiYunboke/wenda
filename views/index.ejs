@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="/stylesheets/wenda.index.css">
   <script src="/javascripts/wenda.index.js" charset="utf-8"></script>
   <title>问答系统主页</title>
+  <style media="screen">
+
+  </style>
 </head>
 <body>
   <div  id='head1' class="head">
@@ -69,8 +72,23 @@
     <div class="box-left">
       <div id="QA">
         <ul>
-          <li>最新回答</li>
-          <li>热门回答</li>
+          <li><a href="/">最新回答</a></li>
+          <li><a href="/hot_question">热门回答</li>
+        </ul>
+      </div>
+      <div id="question_list">
+        <ul class="qdata">
+          <% data.forEach(function(data1){ %>
+              <li><span>赏金</span><span><%= data1.reward %></span>
+                <a class="tdata" href="/answer?questions=<%= data1._id %>"><%= data1.title %></a>
+                <% data1.tag.forEach(function(data){ %>
+                  <a class="tag" href="#">
+                    <%= data %>
+                  </a>
+                <% }); %>
+              </li>
+          <% }) %>
+          <!-- <li></li> -->
         </ul>
       </div>
     </div>
@@ -82,18 +100,18 @@
         <div class="present">
           这是主页注册框的介绍
         </div>
-        <form id='index_zc' action="index.html" method="post">
-          <div>
+        <form id='index_zc' method="post">
+          <!-- <div>
             <input type="text" value="真实姓名或者常用名称">
           </div>
           <div>
             <input type="text" value="请输入你的密码">
-          </div>
+          </div> -->
           <div>
-            <input type="text" value="请再次输入你的密码">
+            <input type="text" value="请输入你的问题">
           </div>
           <span id="reg" class="register">
-            注册
+            <a href="/question">请提问</a>
           </span>
         </form>
       </div>
