@@ -11,6 +11,8 @@ var users = require('./routes/users');
 var login = require('./routes/login');
 var register = require('./routes/register');
 var find = require('./routes/find');
+var question = require('./routes/question');
+
 
 
 
@@ -40,6 +42,8 @@ app.use('/users', users);
 app.use('/register', register);
 app.use('/login', login);
 app.use('/find', find);
+app.use('/question', question);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

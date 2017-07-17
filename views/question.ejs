@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>问题提问</title>
+	<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/text/formcss/form.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/monokai-sublime.min.css"/>
+	<link href="/text/css/themes/quill.snow.css" rel="stylesheet">
+	<style type="text/css">
+		#editor-container {
+		  height: 500px;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="form-body">
+
+			<!-- 问题标题 -->
+			<div id="form-title">
+				<input type="text" name="title" id="title" autocomplete="off" placeholder="标题:简短描述你的问题">
+			</div>
+			<!-- 问题标签 -->
+			<div id="form-group">
+				<!-- 标签添加框 -->
+					<div id="input" name="group">
+						<input type="text" id="group" autocomplete="off" placeholder="标签:选择你的标签">
+					</div>
+					<!-- 标签 -->
+					<div id="tags">
+							<ul id="nav-tabs">
+								<li class="active"><a href="#">开发语言</a></li>
+								<li><a href="#">平台框架</a></li>
+								<li><a href="#">服务器</a></li>
+								<li><a href="#">数据库和缓存</a></li>
+								<li><a href="#">开发工具</a></li>
+								<li><a href="#">系统设备</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+					<!-- 标签内容 -->
+					<div id="tags-text">
+					<!-- 开发语言标签 -->
+						<div class="tab-pane active" style="display:block;" id="开发语言">
+							<ul calss="taglist">
+								<li class="kai"><a href="#" class="tag">javascript</a></li>
+								<li class="kai"><a href="#" class="tag">php</a></li>
+								<li class="kai"><a href="#" class="tag">html</a></li>
+								<li class="kai"><a href="#" class="tag">java</a></li>
+								<li class="kai"><a href="#" class="tag">python</a></li>
+								<li class="kai"><a href="#" class="tag">html5</a></li>
+								<li class="kai"><a href="#" class="tag">node.js</a></li>
+								<li class="kai"><a href="#" class="tag">c++</a></li>
+								<li class="kai"><a href="#" class="tag">c</a></li>
+								<li class="kai"><a href="#" class="tag">objective-c</a></li>
+								<li class="kai"><a href="#" class="tag">shell</a></li>
+								<li class="kai"><a href="#" class="tag">golang</a></li>
+								<li class="kai"><a href="#" class="tag">swift</a></li>
+								<li class="kai"><a href="#" class="tag">c#</a></li>
+								<li class="kai"><a href="#" class="tag">ruby</a></li>
+								<li class="kai"><a href="#" class="tag">bash</a></li>
+								<li class="kai"><a href="#" class="tag">sass</a></li>
+								<li class="kai"><a href="#" class="tag">asp.net</a></li>
+								<li class="kai"><a href="#" class="tag">typescript</a></li>
+								<li class="kai"><a href="#" class="tag">less</a></li>
+								<li class="kai"><a href="#" class="tag">scala</a></li>
+							</ul>
+						</div>
+					<!-- 平台框架标签 -->
+						<div class="tab-pane"  id="平台框架">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">laravel</a></li>
+								<li class="kai"><a href="#" class="tag">flask</a></li>
+								<li class="kai"><a href="#" class="tag">django</a></li>
+								<li class="kai"><a href="#" class="tag">spring</a></li>
+								<li class="kai"><a href="#" class="tag">express</a></li>
+								<li class="kai"><a href="#" class="tag">ruby-on-rails</a></li>
+								<li class="kai"><a href="#" class="tag">yii</a></li>
+								<li class="kai"><a href="#" class="tag">tornado</a></li>
+								<li class="kai"><a href="#" class="tag">koa</a></li>
+								<li class="kai"><a href="#" class="tag">struts</a></li>
+							</ul>
+						</div>
+						<!-- 服务器 -->
+						<div class="tab-pane"  id="服务器">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">linux</a></li>
+								<li class="kai"><a href="#" class="tag">nginx</a></li>
+								<li class="kai"><a href="#" class="tag">apache</a></li>
+								<li class="kai"><a href="#" class="tag">docker</a></li>
+								<li class="kai"><a href="#" class="tag">ubuntn</a></li>
+								<li class="kai"><a href="#" class="tag">centos</a></li>
+								<li class="kai"><a href="#" class="tag">tomact</a></li>
+								<li class="kai"><a href="#" class="tag">缓存</a></li>
+								<li class="kai"><a href="#" class="tag">负载均衡</a></li>
+								<li class="kai"><a href="#" class="tag">unix</a></li>
+								<li class="kai"><a href="#" class="tag">hadoop</a></li>
+								<li class="kai"><a href="#" class="tag">windows-server</a></li>
+							</ul>
+						</div>
+						<!-- 数据库和缓存 -->
+						<div class="tab-pane"  id="数据库和缓存">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">mysql</a></li>
+								<li class="kai"><a href="#" class="tag">sql</a></li>
+								<li class="kai"><a href="#" class="tag">redis</a></li>
+								<li class="kai"><a href="#" class="tag">mongodb</a></li>
+								<li class="kai"><a href="#" class="tag">oracle</a></li>
+								<li class="kai"><a href="#" class="tag">nosql</a></li>
+								<li class="kai"><a href="#" class="tag">memcached</a></li>
+								<li class="kai"><a href="#" class="tag">sqlserver</a></li>
+								<li class="kai"><a href="#" class="tag">sqlite</a></li>
+								<li class="kai"><a href="#" class="tag">postgresql</a></li>
+							</ul>
+						</div>
+						<!-- 开发工具 -->
+						<div class="tab-pane"  id="开发工具">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">git</a></li>
+								<li class="kai"><a href="#" class="tag">github</a></li>
+								<li class="kai"><a href="#" class="tag">vim</a></li>
+								<li class="kai"><a href="#" class="tag">xcode</a></li>
+								<li class="kai"><a href="#" class="tag">sublime-text</a></li>
+								<li class="kai"><a href="#" class="tag">eclipse</a></li>
+								<li class="kai"><a href="#" class="tag">intellij-idea</a></li>
+								<li class="kai"><a href="#" class="tag">svn</a></li>
+								<li class="kai"><a href="#" class="tag">visual-studio-code</a></li>
+								<li class="kai"><a href="#" class="tag">maven</a></li>
+								<li class="kai"><a href="#" class="tag">ide</a></li>
+								<li class="kai"><a href="#" class="tag">atom</a></li>
+							</ul>
+						</div>
+						<!-- 系统设备 -->
+						<div class="tab-pane"  id="系统设备">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">android</a></li>
+								<li class="kai"><a href="#" class="tag">ios</a></li>
+								<li class="kai"><a href="#" class="tag">chrome</a></li>
+								<li class="kai"><a href="#" class="tag">windows</a></li>
+								<li class="kai"><a href="#" class="tag">iphone</a></li>
+								<li class="kai"><a href="#" class="tag">internet-explore</a></li>
+								<li class="kai"><a href="#" class="tag">firefox</a></li>
+								<li class="kai"><a href="#" class="tag">safari</a></li>
+								<li class="kai"><a href="#" class="tag">ipad</a></li>
+								<li class="kai"><a href="#" class="tag">opera</a></li>
+								<li class="kai"><a href="#" class="tag">apple-watch</a></li>
+							</ul>
+						</div>
+						<!-- 其他 -->
+						<div class="tab-pane"  id="其他">
+							<ul class="taglist">
+								<li class="kai"><a href="#" class="tag">html5</a></li>
+								<li class="kai"><a href="#" class="tag">react.js</a></li>
+								<li class="kai"><a href="#" class="tag">搜索引擎</a></li>
+								<li class="kai"><a href="#" class="tag">virtualenv</a></li>
+								<li class="kai"><a href="#" class="tag">licene</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- 编辑器 -->
+		<div class="htmleaf-container" name="text">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mt50">
+						<div id="standalone-container">
+							<div id="toolbar-container">
+								<span class="ql-formats">
+									<select class="ql-font"></select>
+								<select class="ql-size"></select>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-bold"></button>
+									<button class="ql-italic"></button>
+									<button class="ql-underline"></button>
+									<button class="ql-strike"></button>
+								</span>
+								<span class="ql-formats">
+									<select class="ql-color"></select>
+									<select class="ql-background"></select>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-script" value="sub"></button>
+									<button class="ql-script" value="super"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-header" value="1"></button>
+									<button class="ql-header" value="2"></button>
+									<button class="ql-blockquote"></button>
+									<button class="ql-code-block"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-list" value="ordered"></button>
+									<button class="ql-list" value="bullet"></button>
+									<button class="ql-indent" value="-1"></button>
+									<button class="ql-indent" value="+1"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-direction" value="rtl"></button>
+									<select class="ql-align"></select>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-link"></button>
+									<button class="ql-image"></button>
+									<button class="ql-video"></button>
+									<button class="ql-formula"></button>
+								</span>
+								<span class="ql-formats">
+									<button class="ql-clean"></button>
+								</span>
+							</div>
+								<div id="editor-container"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="submit">
+			<div class="reward">
+				<input type="text" id="reward" name="reward" autocomplete="off" placeholder="你是否要悬赏呢？悬赏多少？">
+			</div>
+			<button type="submit" id="sub" >发布问题</button>
+
+		</div>
+
+</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+	<script src="/text/dist/quill.js"></script>
+	<script>
+		var quill = new Quill('#editor-container', {
+		    modules: {
+		      formula: true,
+		      syntax: true,
+		      toolbar: '#toolbar-container'
+		    },
+		    placeholder: 'Compose an epic...',
+		    theme: 'snow'
+		  });
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//标签页的显示
+			$("#input").click(function(){
+				$("#group").focus();
+				$("#tags").show();
+			});
+			$("#tags").mouseover(function(){
+				$("#tags").show();
+			}).mouseout(function(){
+				$("#tags").hide();
+			});
+			//显示标签页
+			$("#nav-tabs>li").click(function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			});
+			//显示详细标签
+			for (var i = 0,len = $("#tags #nav-tabs>li").length; i < len  ;i++){
+				$("#nav-tabs>li").eq(i).click(i,function(event){
+					$("#tags-text .tab-pane").eq(event.data).show().siblings(".tab-pane").hide();
+					console.log(event.data);
+				});
+			};
+			//标签的添加与删除
+			//获取标签
+			var co;
+			var arr = [];
+			for (var j = 0, len = 10000; j < len; j++){
+				$(".kai").eq(j).click(j,function(event){
+					var a = $(".kai").eq(event.data).text();
+					if ($("#input>span").length<5){
+						$("#input").prepend("<span>" + a + "</span>");
+
+						//获取标签信息
+						co = $("#input span:first").text();
+						arr.push(co);
+						console.log(arr);
+
+						$("#input span").click(function(){
+							$(this).remove();
+						});
+					};
+				});
+			};
+
+
+			//ajax获取数据传入后台
+			$("#sub").click(function(){
+				//获取文输入信息
+				var content =  $("#editor-container").text();
+				console.log(content);
+				//获取title信息
+				var title = $("#title").val();
+				console.log(title);
+				//获取悬赏信息
+				var reward = $("#reward").val();
+				console.log(reward);
+				//时间
+				var watch = new Date().getTime();
+				console.log(watch);
+				//信息聚合
+				var con = {
+					title : title,
+					content : content,
+					reward : reward,
+					time : watch,
+					tag : arr
+				};
+
+				$.ajax({
+					url : "/one",
+					data : con,
+					type : "post",
+					traditional : true
+				}).then(function(data,textStatus,jqXHR){
+					console.log("success");
+					// window.location = "http://127.0.0.1:3000/question";
+				},function(jqXHR,textStstus,errThrown){
+					console.log(textStstus);
+				});
+			});
+
+		});
+	</script>
+</body>
+</html>
