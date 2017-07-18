@@ -79,4 +79,12 @@
       window.location.href = url;
     }
 
+    var TIME = document.getElementsByClassName("Time");
+    for(var i = 0;i < TIME.length;i++){
+      var secondsStr = TIME[i].innerHTML;
+      var seconds = parseInt(secondsStr);
+      var unixTimestamp = new Date(seconds);
+      var commonTime = unixTimestamp.toLocaleString();
+      TIME[i].innerHTML = commonTime;
+    }
   };
