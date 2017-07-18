@@ -7,9 +7,12 @@ router.get('/',function(req,res,next){
 });
 router.post('/',function(req,res){
 
+
+
   var data = req.body;
   console.log(data);
   var m = new ques();
+  m.name = req.session.name;
   m.title = data.title;
   m.content = data.content;
   m.tag = data.tag;

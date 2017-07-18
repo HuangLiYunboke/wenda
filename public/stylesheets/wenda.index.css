@@ -231,7 +231,7 @@ ul{
 .qdata li{
   line-height: 50px;
   height: 50px;
-  width: 1200px;
+  width: 1000px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -260,6 +260,8 @@ ul{
 
 .tag{
   background-color: lightblue;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 .box-right {

@@ -224,7 +224,7 @@
 
 		<div id="submit">
 			<div class="reward">
-				<input type="text" id="reward" name="reward" autocomplete="off" placeholder="你是否要悬赏呢？悬赏多少？">
+				<input type="text" id="reward" name="reward"  autocomplete="off" placeholder="你是否要悬赏呢？悬赏多少？">
 			</div>
 			<!-- <button type="submit" id="sub" >发布问题</button> -->
 			<a href="/" id="sub">发布问题</a>
@@ -311,6 +311,10 @@
 				console.log(title);
 				//获取悬赏信息
 				var reward = $("#reward").val();
+				if (reward){
+				}else {
+					reward = 0;
+				}
 				console.log(reward);
 				//时间
 				var time = new Date();
@@ -322,7 +326,7 @@
 					reward : reward,
 					time : time,
 					watch : watch,
-					tag : arr
+					tag : arr,
 				};
 
 				$.ajax({

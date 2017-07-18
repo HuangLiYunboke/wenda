@@ -22,8 +22,8 @@ router.post('/', (req, res) => {
           req.session.name = doc.nname;
           console.log(req.session.name);
           console.log('登陆成功');
-          // res.redirect('/');
-          res.render('index',{title:'问答', name: req.session.name})
+          res.redirect('/');
+          // res.render('index',{title:'问答', name: req.session.name})
         }else{
           res.send('密码不正确');
         }
