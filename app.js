@@ -21,6 +21,7 @@ var geren = require('./routes/geren');
 
 var question = require('./routes/question');
 var answer = require('./routes/answer');
+var apis = require('./routes/apis');
 
 
 
@@ -69,6 +70,7 @@ app.use('/geren_wfor',geren);
 
 app.use('/question', question);
 app.use('/answer', answer);
+app.use('/api', apis);
 
 
 
