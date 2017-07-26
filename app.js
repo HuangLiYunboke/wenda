@@ -5,6 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var webpack = require('webpack');
+var WebpackHotMiddleware = require('webpack-hot-middleware');
+var WebpackDevMiddleware = require('webpack-dev-middleware');
+var config = require('./webpack.config.js');
+var compiler = webpack(config);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -29,6 +34,15 @@ app.use(session({
 		maxAge: 1000*60*30
 	}
 }));
+
+// webpack middleware
+app.use(WebpackDevMiddleware(compiler, {
+  publicPath: config.output.publicPath,
+  stats: { colors: true }
+}));
+app.use(WebpackHotMiddleware(compiler));
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
