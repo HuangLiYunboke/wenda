@@ -29,7 +29,7 @@ body{
     		position: relative;
  }
 .padd{
-	height: 57px; 
+	height: 57px;
 	width: auto;
 }
 
@@ -89,11 +89,7 @@ body{
 	padding:5px 10px
 }
 #wdow .wdow-di .wdow-n .d-sp{
-	
-	display: inline-block;
-	width: 170px;
-	padding:5px 10px ;
-	margin: 10px 5px;
+	padding:15px 15px ;
 }
 
 #wdow .wdow-di .wdow-n .fon-cor{
@@ -106,26 +102,63 @@ body{
 	height:120px ;
 }
 #wdow .wdow-di .wdow-n .wdow-n-strry{
-	padding:5px 10px ;height:100px 
+	padding:5px 10px ;
+	height:100px
 }
 #wd-div1,#wd-div2,#wd-div3{
 	display: none;
+
 }
+@keyframes animations{
+	0%{
+		opacity: 0
+	}
+	50%{
+		opacity: 0.5
+	}
+	100%{
+		opacity: 1
+	}
+}
+@keyframes unanimations{
+	0%{
+		opacity: 1
+	}
+	50%{
+		opacity: 0.5
+	}
+	100%{
+		opacity: 0
+	}
+}
+.animation{
+	animation :animations 2s
+}
+.unanimation{
+	animation : unanimations 2s
+}
+
  a.a-sty{
 	width:16px;
 	height:16px;
 	position: absolute;
 	right: 20px;
 	top: 60px;
-	/*z-index: 1;*/
+	z-index: 1;
 	background: url('../images/bianji02.png');
 }
 
  a.a-sty:hover{
 	background: url('../images/bianji01.png');
 }
-
-
+#indx-oneul li a:hover{
+	background-color: #ccc;
+	transition: all 0.8s;
+}
+#ul-lef li a:hover{
+	background-color: #ccc;
+	transition: all 0.8s;
+}
 /*头像  粉丝/关注 绑定*/
 
 
@@ -148,19 +181,19 @@ body{
 	height: 180px;
 	width: 205px;
 	border-radius: 50% ;
-	opacity: 0; 
+	opacity: 0;
 }
 
 .afollow ul{
 	text-align: center;
 	margin: 1px auto;
-	
+
 }
 
 .afollow ul li{
 	display: inline-block;
 	float: none;
-	
+
 }
 
 
@@ -168,22 +201,23 @@ body{
 
 /*表2*/
 .oaerror {
-  
+
   margin: 0 auto; /* Centering Stuff */
- 
+
   border-bottom:   1px solid #CECECE;
   border-radius: 3px;
-  
- 
-  
+
+
+
 }
 .change{
-	padding: 10px 6px;
+	padding: 0px 0px;
 
 }
 .bord-none{
 	border: none;
 	text-align: center;
+	padding: 18px 20px
 
 }
 

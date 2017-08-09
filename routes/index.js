@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     queModel.find({}).sort({"watch":-1}).exec(function(err,data){
       console.log(data);
 
-      res.render('react', {title: '问答',name: req.session.name,data:data});
+      res.render('index', {title: '问答',name: req.session.name,data:data});
     });
 });
 
