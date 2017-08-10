@@ -16,7 +16,22 @@ router.route('/list')
 })
 
 // android register
-
+// router.route('/register')
+// .post(function(req, res) {
+//
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   bcrypt.hash(req.body.password, salt, (err, hash) => {
+//     var user = new db.user({
+//       name: req.body.username,
+//       password: hash
+//     });
+//     user.save((err, data) => {
+//       // res.redirect('/');
+//     });
+//   });
+//
+//    res.json('ok');
+// })
 
 router.route('/gerenpost')
 	.post(function(req, res) {
